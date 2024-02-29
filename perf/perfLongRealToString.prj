@@ -1,0 +1,21 @@
+% Project file for library
+
+-lookup = *.obj = $!\..\obj
+-lookup = *.asm = $!\..\asm
+-lookup = *.odf = $!\..\odf
+-lookup = *.sym = $!\..\sym
+-lookup = *.ob2 = $!;$!\..\src
+
++makedef
++changesym
++xcomments
++makedirs
++m2extensions
++m2addtypes
++o2extensions
++o2numext
+
+!new exename = $!\perfLongRealToString.exe
+
+!module std.lib
+!module perfLongRealToString

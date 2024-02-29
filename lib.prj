@@ -1,0 +1,109 @@
+% Project file for library
+-lookup = *.obj = $!\obj
+-lookup = *.asm = $!\asm
+-lookup = *.odf = $!\odf
+-lookup = *.sym = $!\sym
+-lookup = *.ob2 = $!\src;$!\src\LongReal;$!\src\Real;$!\src\Ryu
+
+!if not defined DEBUG then
+   -DEBUG:+
+!end
+!if DEBUG then
+    !new mode = "debug"
+    -assert+
+    -gendebug+
+    -genhistory+
+    -lineno+
+    -genframe+
+    -space+
+    -doreorder-
+    -procinline-
+    -dbgnestedproc+
+    -checkdiv+
+    -checkindex+
+    -checkdindex+
+    -checkrange+
+    -checkset+
+    -checknil+
+    -checkproc+
+    -ioverflow+
+    -coverflow+
+    -foverflow+
+!else
+    !new mode = "optimized"
+    -assert-
+    -gendebug-
+    -genhistory-
+    -lineno-
+    -genframe-
+    -space-
+    -nooptimize-
+    -doreorder+
+    -procinline+
+    -dbgnestedproc-
+    -checkdiv-
+    -checkindex-
+    -checkdindex-
+    -checkrange-
+    -checkset-
+    -checknil-
+    -checkproc-
+    -ioverflow-
+    -coverflow-
+    -foverflow-
+!end
+
++makedef
++changesym
++xcomments
++makedirs
++m2extensions
++m2addtypes
++o2extensions
++o2numext
+
+-mincpu = pentiumpro
+-cpu = pentiumpro
+-noptralias+
+-genptrinit+
+-alignment=4
+
++genlib
+!new libname = std
+
+!message "Compiling " + libname + " in " + mode + " mode"
+
+!module ADTDictionary
+!module ADTList
+!module ADTSet
+!module ADTStream
+!module ADTTree
+!module ADTVector
+!module ArrayOfByte
+!module ArrayOfChar
+!module Byte
+!module Char
+!module DataConfig
+!module DateTime
+!module DBSQLite3
+!module Format
+!module Integer
+!module Log
+!module LongInt
+!module LongLongInt
+!module LongReal
+!module LongWord
+!module O2Testing
+!module O2Timing
+!module Object
+!module OS
+!module OSDir
+!module OSFile
+!module OSPath
+!module OSStream
+!module Real
+!module ShortInt
+!module String
+!module StringRegex
+!module UI
+!module Word

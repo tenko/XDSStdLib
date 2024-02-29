@@ -1,0 +1,44 @@
+% Project file for library
+
+-lookup = *.obj = $!\..\obj
+-lookup = *.asm = $!\..\asm
+-lookup = *.odf = $!\..\odf
+-lookup = *.sym = $!\..\sym
+-lookup = *.ob2 = $!;$!\..\src
+
+-assert-
+-gendebug-
+-genhistory-
+-lineno-
+-genframe-
+-space-
+-nooptimize-
+-procinline+
+-checkdiv-
+-checkindex-
+-checkdindex-
+-checkrange-
+-checkset-
+-checknil-
+-checkproc-
+-ioverflow-
+-coverflow-
+-foverflow-
+
+-mincpu = pentiumpro
+-cpu = pentiumpro
+
++makedef
++changesym
++xcomments
++makedirs
++m2extensions
++m2addtypes
++o2extensions
++o2numext
+-heaplimit = 0
+
+!new exename = $!\perfDictionary.exe
+
+!module std.lib
+!module perfDictionary.ob2

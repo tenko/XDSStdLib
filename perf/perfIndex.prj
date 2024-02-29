@@ -1,0 +1,48 @@
+% Project file for library
+
+-lookup = *.obj = $!\..\obj
+-lookup = *.asm = $!\..\asm
+-lookup = *.odf = $!\..\odf
+-lookup = *.sym = $!\..\sym
+-lookup = *.ob2 = $!;$!\..\src
+
++makedef
++changesym
++xcomments
++makedirs
++m2extensions
++m2addtypes
++o2extensions
++o2numext
+
+-assert-
+-gendebug-
+-genhistory-
+-lineno-
+-genframe-
+-space-
+-nooptimize-
+-doreorder+
+-procinline+
+-dbgnestedproc-
+-checkdiv-
+-checkindex-
+-checkdindex-
+-checkrange-
+-checkset-
+-checknil-
+-checkproc-
+-ioverflow-
+-coverflow-
+-foverflow-
+
+-mincpu = pentiumpro
+-cpu = pentiumpro
+-noptralias+
+-genptrinit+
+-alignment=4
+
+!new exename = $!\perfIndex.exe
+
+!module std.lib
+!module perfIndex.ob2
