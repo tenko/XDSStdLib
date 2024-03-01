@@ -22,7 +22,7 @@ The API is a not intended to be compatibe with legacy code
 and use comparable Python standard library API or POSIX
 where it fits.
 
-Note that currently the *XDSCompiler*``* is limited to
+Note that currently the *XDSCompiler* is limited to
 32bit platforms. There is support for 64bit data types,
 but these have some bugs which this libarary tries to
 work around.

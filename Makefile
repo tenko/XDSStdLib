@@ -68,6 +68,7 @@ doc:
 	@echo Building doc
 	@rm -rf build > /dev/null 2>&1 || true
 	@-rm -f doc/src/*.rst
+	@-mkdir -p doc/src
 	@for f in src/*.ob2 ; do ./tools/docgen.py $$f -o doc/$$f.rst ; done
 	@echo Creating html
 	@make -C doc html
