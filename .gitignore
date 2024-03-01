@@ -1,0 +1,26 @@
+# Folders
+build/
+odf/
+sym/
+doc/_static
+doc/_templates
+doc/src
+
+# Generated files
+tmp.lnk
+*.obj
+*.odf
+*.sym
+
+# Libraries
+*.lib
+*.a
+
+# Shared objects
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
