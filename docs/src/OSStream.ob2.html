@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSStream &mdash; XDSStdLib 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=2709fde1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="O2Testing" href="O2Testing.ob2.html" />
+    <link rel="prev" title="OSPath" href="OSPath.ob2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Common:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Const.ob2.html">Const</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Const.ob2.html#id2">Const</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Object.ob2.html">Object</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Object.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Object.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Object.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-haserror">Stream.HasError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-lasterror">Stream.LastError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-clearerror">Stream.ClearError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-readbytes">Stream.ReadBytes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-readbyte">Stream.ReadByte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-readchar">Stream.ReadChar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-readinteger">Stream.ReadInteger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-readlongint">Stream.ReadLongInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-readreal">Stream.ReadReal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-readlongreal">Stream.ReadLongReal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-readline">Stream.ReadLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-writebytes">Stream.WriteBytes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-writebyte">Stream.WriteByte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-writechar">Stream.WriteChar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-writeinteger">Stream.WriteInteger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-writelongint">Stream.WriteLongInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-writereal">Stream.WriteReal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-writelongreal">Stream.WriteLongReal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-writestring">Stream.WriteString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-writenl">Stream.WriteNL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-writestream">Stream.WriteStream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-format">Stream.Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-formatinteger">Stream.FormatInteger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-formatcardinal">Stream.FormatCardinal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-seek">Stream.Seek</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-tell">Stream.Tell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-truncate">Stream.Truncate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-flush">Stream.Flush</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-close">Stream.Close</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-closed">Stream.Closed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-istty">Stream.IsTTY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-readable">Stream.Readable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-writeable">Stream.Writeable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Object.ob2.html#stream-seekable">Stream.Seekable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Type.ob2.html">Type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Type.ob2.html#types">Types</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic Data Types:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ArrayOfByte.ob2.html">ArrayOfByte</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ArrayOfByte.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfByte.ob2.html#fillword">FillWord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfByte.ob2.html#fill">Fill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfByte.ob2.html#zero">Zero</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfByte.ob2.html#copy">Copy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfByte.ob2.html#compare">Compare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfByte.ob2.html#find">Find</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfByte.ob2.html#hash">Hash</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ArrayOfChar.ob2.html">ArrayOfChar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ArrayOfChar.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#clear">Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#nulterminate">NulTerminate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#capacity">Capacity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#length">Length</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#assign">Assign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#fillchar">FillChar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#appendchar">AppendChar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#append">Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#extract">Extract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#compare">Compare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#indexchar">IndexChar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#index">Index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#id2">Index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#delete">Delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#insert">Insert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#replace">Replace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#lefttrim">LeftTrim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#righttrim">RightTrim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#trim">Trim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#leftpad">LeftPad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#rightpad">RightPad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#lowercase">LowerCase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#uppercase">UpperCase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#capitalize">Capitalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#startswith">StartsWith</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#endswith">EndsWith</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#match">Match</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ArrayOfChar.ob2.html#hash">Hash</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Byte.ob2.html">Byte</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Byte.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Byte.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Byte.ob2.html#max">Max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Byte.ob2.html#min">Min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Byte.ob2.html#fromstring">FromString</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Char.ob2.html">Char</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Char.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Char.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Char.ob2.html#iscontrol">IsControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Char.ob2.html#isdigit">IsDigit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Char.ob2.html#isletter">IsLetter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Char.ob2.html#isspace">IsSpace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Char.ob2.html#islower">IsLower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Char.ob2.html#isupper">IsUpper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Char.ob2.html#lower">Lower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Char.ob2.html#upper">Upper</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DateTime.ob2.html">DateTime</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DateTime.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DateTime.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DateTime.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#tryencodedate">TryEncodeDate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#encodedate">EncodeDate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#tryencodedatetime">TryEncodeDateTime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#encodedatetime">EncodeDateTime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#decodedate">DecodeDate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#decodetime">DecodeTime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#decodedatetime">DecodeDateTime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#datetimetodate">DateTimeToDate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#now">Now</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#today">Today</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#incyear">IncYear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#decyear">DecYear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#incmonth">IncMonth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#decmonth">DecMonth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#inc">Inc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#dec">Dec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#extract">Extract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#trunc">Trunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#diff">Diff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#span">Span</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DateTime.ob2.html#fromstring">FromString</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Integer.ob2.html">Integer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Integer.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Integer.ob2.html#max">Max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Integer.ob2.html#min">Min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Integer.ob2.html#random">Random</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Integer.ob2.html#fromstring">FromString</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LongInt.ob2.html">LongInt</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LongInt.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="LongInt.ob2.html#max">Max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongInt.ob2.html#min">Min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongInt.ob2.html#exp">Exp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongInt.ob2.html#random">Random</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongInt.ob2.html#fromstring">FromString</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LongLongInt.ob2.html">LongLongInt</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LongLongInt.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="LongLongInt.ob2.html#max">Max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongLongInt.ob2.html#min">Min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongLongInt.ob2.html#random">Random</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongLongInt.ob2.html#fromstring">FromString</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LongReal.ob2.html">LongReal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LongReal.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LongReal.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#fpclassify">FPClassify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#isnan">IsNan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#isinf">IsInf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#isfinite">IsFinite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#isnormal">IsNormal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#signbit">SignBit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#copysign">CopySign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#abs">Abs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#frexp">Frexp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#scalbn">Scalbn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#ldexp">Ldexp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#max">Max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#min">Min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#sin">Sin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#cos">Cos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#tan">Tan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#arcsin">ArcSin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#arccos">ArcCos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#arctan">ArcTan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#arctan2">ArcTan2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#sqrt">Sqrt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#pow">Pow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#exp">Exp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#log">Log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#log10">Log10</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#floor">Floor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#round">Round</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#random">Random</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#fromstring">FromString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongReal.ob2.html#wordstolongreal">WordsToLongReal</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LongWord.ob2.html">LongWord</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LongWord.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="LongWord.ob2.html#lsr">LSR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongWord.ob2.html#combine">Combine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongWord.ob2.html#split">Split</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongWord.ob2.html#cast">Cast</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongWord.ob2.html#castconst">CastConst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongWord.ob2.html#popcnt">PopCnt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongWord.ob2.html#lzcnt">LZCnt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongWord.ob2.html#random">Random</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LongWord.ob2.html#fromstring">FromString</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Real.ob2.html">Real</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Real.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Real.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#fpclassify">FPClassify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#isnan">IsNan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#isinf">IsInf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#isfinite">IsFinite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#isnormal">IsNormal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#signbit">SignBit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#copysign">CopySign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#abs">Abs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#frexp">Frexp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#scalbn">Scalbn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#ldexp">Ldexp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#max">Max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#min">Min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#sin">Sin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#cos">Cos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#tan">Tan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#arcsin">ArcSin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#arccos">ArcCos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#arctan">ArcTan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#arctan2">ArcTan2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#sqrt">Sqrt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#pow">Pow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#exp">Exp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#log">Log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#log10">Log10</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#floor">Floor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#round">Round</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#random">Random</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Real.ob2.html#fromstring">FromString</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ShortInt.ob2.html">ShortInt</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ShortInt.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ShortInt.ob2.html#max">Max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ShortInt.ob2.html#min">Min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ShortInt.ob2.html#random">Random</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ShortInt.ob2.html#fromstring">FromString</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="String.ob2.html">String</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="String.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="String.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="String.ob2.html#reserve">Reserve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="String.ob2.html#assign">Assign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="String.ob2.html#appendchar">AppendChar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="String.ob2.html#append">Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="String.ob2.html#extract">Extract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="String.ob2.html#insert">Insert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="String.ob2.html#replace">Replace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="String.ob2.html#writer-writechar">Writer.WriteChar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="String.ob2.html#writer-writestring">Writer.WriteString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="String.ob2.html#writer-format">Writer.Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="String.ob2.html#format">Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="String.ob2.html#formatdatetime">FormatDateTime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Word.ob2.html">Word</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Word.ob2.html#vars">Vars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Word.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Word.ob2.html#popcnt">PopCnt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Word.ob2.html#lzcnt">LZCnt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Word.ob2.html#swap">Swap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Word.ob2.html#fillbyte">FillByte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Word.ob2.html#cast">Cast</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Word.ob2.html#castconst">CastConst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Word.ob2.html#randomseed">RandomSeed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Word.ob2.html#random">Random</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Word.ob2.html#hash">Hash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Word.ob2.html#fromstring">FromString</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Type.ob2.html">Type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Type.ob2.html#types">Types</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Abstract Data Types:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ADT.ob2.html">ADT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ADT.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADT.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ADT.ob2.html#element-compare">Element.Compare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADT.ob2.html#stringelement-compare">StringElement.Compare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADT.ob2.html#newstringelement">NewStringElement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ADTDictionary.ob2.html">ADTDictionary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ADTDictionary.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADTDictionary.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADTDictionary.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionary-init">Dictionary.Init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionary-ihaskey">Dictionary.IHasKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionary-iget">Dictionary.IGet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionary-clear">Dictionary.Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionary-iset">Dictionary.ISet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionary-ideleteentry">Dictionary.IDeleteEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionaryiterator-next">DictionaryIterator.Next</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionaryiterator-reset">DictionaryIterator.Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrint-haskey">DictionaryStrInt.HasKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrint-setentry">DictionaryStrInt.SetEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrint-set">DictionaryStrInt.Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrint-getentry">DictionaryStrInt.GetEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrint-get">DictionaryStrInt.Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrint-delete">DictionaryStrInt.Delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrint-iterator">DictionaryStrInt.Iterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrintiterator-key">DictionaryStrIntIterator.Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrintiterator-value">DictionaryStrIntIterator.Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrint-keys">DictionaryStrInt.Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrstr-haskey">DictionaryStrStr.HasKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrstr-setentry">DictionaryStrStr.SetEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrstr-set">DictionaryStrStr.Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrstr-getentry">DictionaryStrStr.GetEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrstr-get">DictionaryStrStr.Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrstr-delete">DictionaryStrStr.Delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrstr-iterator">DictionaryStrStr.Iterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrstriterator-key">DictionaryStrStrIterator.Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrstriterator-value">DictionaryStrStrIterator.Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTDictionary.ob2.html#dictionarystrstr-keys">DictionaryStrStr.Keys</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ADTList.ob2.html">ADTList</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ADTList.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADTList.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#listnode-next">ListNode.Next</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#listnode-prev">ListNode.Prev</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#list-clear">List.Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#list-init">List.Init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#list-isempty">List.IsEmpty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#list-size">List.Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#list-first">List.First</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#list-last">List.Last</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#list-iterator">List.Iterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#listiterator-next">ListIterator.Next</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#listiterator-element">ListIterator.Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#listiterator-reset">ListIterator.Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#listiterator-insert">ListIterator.Insert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#list-append">List.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#list-appendhead">List.AppendHead</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#list-pop">List.Pop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTList.ob2.html#list-pophead">List.PopHead</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ADTSet.ob2.html">ADTSet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ADTSet.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADTSet.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ADTSet.ob2.html#setint-in">SetInt.In</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTSet.ob2.html#setint-add">SetInt.Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTSet.ob2.html#setint-remove">SetInt.Remove</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTSet.ob2.html#setint-iterator">SetInt.Iterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTSet.ob2.html#setintiterator-value">SetIntIterator.Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTSet.ob2.html#setint-values">SetInt.Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTSet.ob2.html#setstr-in">SetStr.In</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTSet.ob2.html#setstr-add">SetStr.Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTSet.ob2.html#setstr-remove">SetStr.Remove</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTSet.ob2.html#setstr-iterator">SetStr.Iterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTSet.ob2.html#setstriterator-value">SetStrIterator.Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTSet.ob2.html#setstr-values">SetStr.Values</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ADTStream.ob2.html">ADTStream</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ADTStream.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADTStream.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADTStream.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#nullstream-readbytes">NullStream.ReadBytes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#nullstream-writebytes">NullStream.WriteBytes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#nullstream-readable">NullStream.Readable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#nullstream-writeable">NullStream.Writeable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#nullstream-seekable">NullStream.Seekable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-open">MemoryStream.Open</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-tostring">MemoryStream.ToString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-readbytes">MemoryStream.ReadBytes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-reserve">MemoryStream.Reserve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-shrink">MemoryStream.Shrink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-writebytes">MemoryStream.WriteBytes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-format">MemoryStream.Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-seek">MemoryStream.Seek</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-tell">MemoryStream.Tell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-truncate">MemoryStream.Truncate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-close">MemoryStream.Close</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-closed">MemoryStream.Closed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-readable">MemoryStream.Readable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-writeable">MemoryStream.Writeable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTStream.ob2.html#memorystream-seekable">MemoryStream.Seekable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ADTTree.ob2.html">ADTTree</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ADTTree.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADTTree.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#treenode-next">TreeNode.Next</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#treenode-prev">TreeNode.Prev</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#tree-clear">Tree.Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#tree-init">Tree.Init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#tree-isempty">Tree.IsEmpty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#tree-size">Tree.Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#tree-first">Tree.First</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#tree-last">Tree.Last</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#tree-iterator">Tree.Iterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#treeiterator-next">TreeIterator.Next</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#treeiterator-element">TreeIterator.Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#treeiterator-reset">TreeIterator.Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#tree-findnode">Tree.FindNode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#tree-find">Tree.Find</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#tree-insert">Tree.Insert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTTree.ob2.html#tree-remove">Tree.Remove</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ADTVector.ob2.html">ADTVector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ADTVector.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADTVector.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADTVector.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vector-size">Vector.Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vector-capacity">Vector.Capacity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vector-reserve">Vector.Reserve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vector-resize">Vector.Resize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vector-shrink">Vector.Shrink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vector-clear">Vector.Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vector-reverse">Vector.Reverse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vector-shuffle">Vector.Shuffle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vector-sort">Vector.Sort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofbyte-initraw">VectorOfByte.InitRaw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofbyte-capacity">VectorOfByte.Capacity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofbyte-reserve">VectorOfByte.Reserve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofbyte-shrink">VectorOfByte.Shrink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofbyte-fillraw">VectorOfByte.FillRaw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofbyte-getraw">VectorOfByte.GetRaw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofbyte-setraw">VectorOfByte.SetRaw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofbyte-appendraw">VectorOfByte.AppendRaw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongint-init">VectorOfLongInt.Init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongint-capacity">VectorOfLongInt.Capacity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongint-reserve">VectorOfLongInt.Reserve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongint-shrink">VectorOfLongInt.Shrink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongint-binaryfind">VectorOfLongInt.BinaryFind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongint-binarysearch">VectorOfLongInt.BinarySearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongint-fill">VectorOfLongInt.Fill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongint-append">VectorOfLongInt.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongint-at">VectorOfLongInt.At</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongint-set">VectorOfLongInt.Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongint-pop">VectorOfLongInt.Pop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongreal-init">VectorOfLongReal.Init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongreal-capacity">VectorOfLongReal.Capacity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongreal-reserve">VectorOfLongReal.Reserve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongreal-shrink">VectorOfLongReal.Shrink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongreal-binarysearch">VectorOfLongReal.BinarySearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongreal-fill">VectorOfLongReal.Fill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongreal-append">VectorOfLongReal.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongreal-at">VectorOfLongReal.At</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongreal-set">VectorOfLongReal.Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectoroflongreal-pop">VectorOfLongReal.Pop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofstring-init">VectorOfString.Init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofstring-capacity">VectorOfString.Capacity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofstring-reserve">VectorOfString.Reserve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofstring-shrink">VectorOfString.Shrink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofstring-binarysearch">VectorOfString.BinarySearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofstring-fill">VectorOfString.Fill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofstring-append">VectorOfString.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofstring-at">VectorOfString.At</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofstring-set">VectorOfString.Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADTVector.ob2.html#vectorofstring-pop">VectorOfString.Pop</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Library:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="DataConfig.ob2.html">DataConfig</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DataConfig.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DataConfig.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DataConfig.ob2.html#initparser">InitParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DataConfig.ob2.html#parser-clear">Parser.Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DataConfig.ob2.html#parser-get">Parser.Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DataConfig.ob2.html#parser-set">Parser.Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DataConfig.ob2.html#parser-delete">Parser.Delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DataConfig.ob2.html#parser-deletesection">Parser.DeleteSection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DataConfig.ob2.html#parser-hassection">Parser.HasSection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DataConfig.ob2.html#parser-sections">Parser.Sections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DataConfig.ob2.html#parser-write">Parser.Write</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DataConfig.ob2.html#parser-read">Parser.Read</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DBSQLite3.ob2.html">DBSQLite3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DBSQLite3.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DBSQLite3.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DBSQLite3.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#db-open">Db.Open</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#db-close">Db.Close</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#db-errormsg">Db.ErrorMsg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#db-execute">Db.Execute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#db-prepare">Db.Prepare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-bindlongreal">Stmt.BindLongReal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-bindint">Stmt.BindInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-bindint64">Stmt.BindInt64</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-bindtext">Stmt.BindText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-bindnull">Stmt.BindNull</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-step">Stmt.Step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-finalize">Stmt.Finalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-reset">Stmt.Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-columncount">Stmt.ColumnCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-datacount">Stmt.DataCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-columntype">Stmt.ColumnType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-columnint">Stmt.ColumnInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-columnint64">Stmt.ColumnInt64</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-columnlongreal">Stmt.ColumnLongReal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#stmt-columntext">Stmt.ColumnText</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DBSQLite3.ob2.html#example">Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DBSQLite3.ob2.html#basic-example">Basic Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Format.ob2.html">Format</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Format.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Format.ob2.html#vars">Vars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Format.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Format.ob2.html#datetime">DateTime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Format.ob2.html#realhex">RealHex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Format.ob2.html#cardinal">Cardinal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Format.ob2.html#integer">Integer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Format.ob2.html#string">String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Format.ob2.html#streamfmt">StreamFmt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Format.ob2.html#lineseparator">LineSeparator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Log.ob2.html">Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Log.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Log.ob2.html#vars">Vars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Log.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Log.ob2.html#debug">Debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Log.ob2.html#info">Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Log.ob2.html#warn">Warn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Log.ob2.html#error">Error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Log.ob2.html#fatal">Fatal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Log.ob2.html#addstream">AddStream</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OS.ob2.html">OS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OS.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OS.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OS.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="OS.ob2.html#programname">ProgramName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OS.ob2.html#args">Args</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OS.ob2.html#arg">Arg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OS.ob2.html#initargument">InitArgument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OS.ob2.html#nextargument">NextArgument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OS.ob2.html#hasenv">HasEnv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OS.ob2.html#env">Env</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OS.ob2.html#execute">Execute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OS.ob2.html#exit">Exit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OSDir.ob2.html">OSDir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OSDir.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OSDir.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="OSDir.ob2.html#dir-open">Dir.Open</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSDir.ob2.html#dir-close">Dir.Close</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSDir.ob2.html#dir-next">Dir.Next</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSDir.ob2.html#dir-name">Dir.Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSDir.ob2.html#dir-isdone">Dir.IsDone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSDir.ob2.html#dir-isfile">Dir.IsFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSDir.ob2.html#current">Current</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSDir.ob2.html#setcurrent">SetCurrent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSDir.ob2.html#create">Create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSDir.ob2.html#delete">Delete</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OSFile.ob2.html">OSFile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OSFile.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="OSFile.ob2.html#exists">Exists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSFile.ob2.html#delete">Delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSFile.ob2.html#rename">Rename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSFile.ob2.html#modifytime">ModifyTime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OSPath.ob2.html">OSPath</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OSPath.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OSPath.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="OSPath.ob2.html#join">Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSPath.ob2.html#absolute">Absolute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSPath.ob2.html#filename">FileName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSPath.ob2.html#dirname">DirName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSPath.ob2.html#extension">Extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OSPath.ob2.html#match">Match</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OSStream</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-open">StreamFile.Open</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-format">StreamFile.Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-formatinteger">StreamFile.FormatInteger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-formatcardinal">StreamFile.FormatCardinal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-readbytes">StreamFile.ReadBytes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-writebytes">StreamFile.WriteBytes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-seek">StreamFile.Seek</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-tell">StreamFile.Tell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-truncate">StreamFile.Truncate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-flush">StreamFile.Flush</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-close">StreamFile.Close</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-closed">StreamFile.Closed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-readable">StreamFile.Readable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-writeable">StreamFile.Writeable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamfile-seekable">StreamFile.Seekable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstdin-readbytes">StreamStdIn.ReadBytes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstdin-readchar">StreamStdIn.ReadChar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstdin-readable">StreamStdIn.Readable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstdin-istty">StreamStdIn.IsTTY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstdout-format">StreamStdOut.Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstdout-formatinteger">StreamStdOut.FormatInteger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstdout-formatcardinal">StreamStdOut.FormatCardinal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstdout-writebytes">StreamStdOut.WriteBytes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstdout-writeable">StreamStdOut.Writeable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstdout-istty">StreamStdOut.IsTTY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstderr-format">StreamStdErr.Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstderr-formatinteger">StreamStdErr.FormatInteger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstderr-formatcardinal">StreamStdErr.FormatCardinal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstderr-writebytes">StreamStdErr.WriteBytes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstderr-writeable">StreamStdErr.Writeable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamstderr-istty">StreamStdErr.IsTTY</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="O2Testing.ob2.html">O2Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="O2Testing.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="O2Testing.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="O2Testing.ob2.html#initialize">Initialize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="O2Testing.ob2.html#begin">Begin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="O2Testing.ob2.html#end">End</a></li>
+<li class="toctree-l3"><a class="reference internal" href="O2Testing.ob2.html#finalize">Finalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="O2Testing.ob2.html#assert">Assert</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="O2Timing.ob2.html">O2Timing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="O2Timing.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="O2Timing.ob2.html#vars">Vars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="O2Timing.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="O2Timing.ob2.html#starttimer">StartTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="O2Timing.ob2.html#elapsed">Elapsed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="O2Timing.ob2.html#timing">Timing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="StringRegex.ob2.html">StringRegex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="StringRegex.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StringRegex.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="StringRegex.ob2.html#compile">Compile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StringRegex.ob2.html#pattern-match">Pattern.Match</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StringRegex.ob2.html#pattern-fullmatch">Pattern.FullMatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StringRegex.ob2.html#pattern-matchlength">Pattern.MatchLength</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StringRegex.ob2.html#pattern-matchpos">Pattern.MatchPos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="StringRegex.ob2.html#example">Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="StringRegex.ob2.html#date-example">Date Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UI.ob2.html">UI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="UI.ob2.html#const">Const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UI.ob2.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UI.ob2.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#quit">Quit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#openfile">OpenFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#openfolder">OpenFolder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#savefile">SaveFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#msgbox">MsgBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#msgboxerror">MsgBoxError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#app-main">App.Main</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#app-destroy">App.Destroy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initapp">InitApp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#control-destroy">Control.Destroy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#control-istoplevel">Control.IsTopLevel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#control-isvisible">Control.IsVisible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#control-show">Control.Show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#control-hide">Control.Hide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#control-isenabled">Control.IsEnabled</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#control-enable">Control.Enable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#control-disable">Control.Disable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-title">Window.Title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-settitle">Window.SetTitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-position">Window.Position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-setposition">Window.SetPosition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-onpositionchanged">Window.OnPositionChanged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-contentsize">Window.ContentSize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-setcontentsize">Window.SetContentSize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-isfullscreen">Window.IsFullScreen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-setfullscreen">Window.SetFullscreen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-oncontentsizechanged">Window.OnContentSizeChanged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-onclosing">Window.OnClosing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-onfocuschanged">Window.OnFocusChanged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-isfocused">Window.IsFocused</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-isborderless">Window.IsBorderless</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-setborderless">Window.SetBorderless</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-setchild">Window.SetChild</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-ismargined">Window.IsMargined</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-setmargined">Window.SetMargined</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-isresizeable">Window.IsResizeable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#window-setresizeable">Window.SetResizeable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initwindow">InitWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#button-text">Button.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#button-settext">Button.SetText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#button-onclicked">Button.OnClicked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initbutton">InitButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#box-append">Box.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#box-numchildren">Box.NumChildren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#box-delete">Box.Delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#box-ispadded">Box.IsPadded</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#box-setpadded">Box.SetPadded</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initverticalbox">InitVerticalBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#inithorizontalbox">InitHorizontalBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#checkbox-text">Checkbox.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#checkbox-settext">Checkbox.SetText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#checkbox-ontoggled">Checkbox.OnToggled</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#checkbox-ischecked">Checkbox.IsChecked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#checkbox-setchecked">Checkbox.SetChecked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initcheckbox">InitCheckbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#entry-text">Entry.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#entry-settext">Entry.SetText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#entry-onchanged">Entry.OnChanged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#entry-isreadonly">Entry.IsReadOnly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#entry-setreadonly">Entry.SetReadOnly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initentry">InitEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initpasswordentry">InitPasswordEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initsearchentry">InitSearchEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#label-text">Label.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#label-settext">Label.SetText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initlabel">InitLabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tab-append">Tab.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tab-insertat">Tab.InsertAt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tab-delete">Tab.Delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tab-numpages">Tab.NumPages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tab-ismargined">Tab.IsMargined</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tab-setmargined">Tab.SetMargined</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#inittab">InitTab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#group-title">Group.Title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#label-settitle">Label.SetTitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#label-setchild">Label.SetChild</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#label-ismargined">Label.IsMargined</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#label-setmargined">Label.SetMargined</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#spinbox-value">Spinbox.Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#spinbox-setvalue">Spinbox.SetValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#spinbox-onchanged">Spinbox.OnChanged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initspinbox">InitSpinbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#slider-value">Slider.Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#slider-setvalue">Slider.SetValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#slider-hastooltip">Slider.HasToolTip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#slider-sethastooltip">Slider.SetHasToolTip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#slider-onchanged">Slider.OnChanged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#slider-onreleased">Slider.OnReleased</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#slider-setrange">Slider.SetRange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initslider">InitSlider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#progressbar-value">ProgressBar.Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#progressbar-setvalue">ProgressBar.SetValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initprogressbar">InitProgressBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#inithorizontalseparator">InitHorizontalSeparator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initverticalseparator">InitVerticalSeparator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#combobox-append">Combobox.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#combobox-insertat">Combobox.InsertAt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#combobox-delete">Combobox.Delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#combobox-clear">Combobox.Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#combobox-numitems">Combobox.NumItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#combobox-selected">Combobox.Selected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#combobox-setselected">Combobox.SetSelected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#combobox-onselected">Combobox.OnSelected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initcombobox">InitCombobox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#editablecombobox-append">EditableCombobox.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#editablecombobox-text">EditableCombobox.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#editablecombobox-settext">EditableCombobox.SetText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#editablecombobox-onchanged">EditableCombobox.OnChanged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initeditablecombobox">InitEditableCombobox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#radiobuttons-append">RadioButtons.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#radiobuttons-selected">RadioButtons.Selected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#radiobuttons-setselected">RadioButtons.SetSelected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#radiobuttons-onselected">RadioButtons.OnSelected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initradiobuttons">InitRadioButtons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#datetimepicker-time">DateTimePicker.Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#datetimepicker-settime">DateTimePicker.SetTime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#datetimepicker-onchanged">DateTimePicker.OnChanged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initdatepicker">InitDatePicker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#inittimepicker">InitTimePicker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initdatetimepicker">InitDateTimePicker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#multilineentry-text">MultilineEntry.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#multilineentry-settext">MultilineEntry.SetText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#multilineentry-append">MultilineEntry.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#multilineentry-onchanged">MultilineEntry.OnChanged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#multilineentry-isreadonly">MultilineEntry.IsReadOnly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#multilineentry-setreadonly">MultilineEntry.SetReadOnly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initmultilineentry">InitMultilineEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initnonwrappingmultilineentry">InitNonWrappingMultilineEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#menuitem-enable">MenuItem.Enable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#menuitem-disable">MenuItem.Disable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#menuitem-ischecked">MenuItem.IsChecked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#menuitem-setchecked">MenuItem.SetChecked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#menuitem-onclicked">MenuItem.OnClicked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#menu-appenditem">Menu.AppendItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#menu-appendcheckitem">Menu.AppendCheckItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#menu-appendquititem">Menu.AppendQuitItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#menu-appendpreferencesitem">Menu.AppendPreferencesItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#menu-appendaboutitem">Menu.AppendAboutItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#menu-appendseparator">Menu.AppendSeparator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initmenu">InitMenu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#area-setsize">Area.SetSize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#area-queueredrawall">Area.QueueRedrawAll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#area-draw">Area.Draw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#area-mouseevent">Area.MouseEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#area-mousecrossed">Area.MouseCrossed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#area-dragbroken">Area.DragBroken</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#area-keyevent">Area.KeyEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initarea">InitArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initscrollingarea">InitScrollingArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#path-destroy">Path.Destroy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#path-newfigure">Path.NewFigure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#path-newfigurewitharc">Path.NewFigureWithArc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#path-lineto">Path.LineTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#path-arcto">Path.ArcTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#path-closefigure">Path.CloseFigure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#path-addrectangle">Path.AddRectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#path-isended">Path.IsEnded</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#path-end">Path.End</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initpath">InitPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initsolidbrush">InitSolidBrush</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initstroke">InitStroke</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#matrix-setidentity">Matrix.SetIdentity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#matrix-translate">Matrix.Translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#matrix-scale">Matrix.Scale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#matrix-rotate">Matrix.Rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#matrix-skew">Matrix.Skew</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#matrix-multiply">Matrix.Multiply</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#matrix-isinvertible">Matrix.IsInvertible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#matrix-invert">Matrix.Invert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#matrix-transformpoint">Matrix.TransformPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#matrix-transformsize">Matrix.TransformSize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#drawcontext-save">DrawContext.Save</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#drawcontext-restore">DrawContext.Restore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#drawcontext-transform">DrawContext.Transform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#drawcontext-clip">DrawContext.Clip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#drawcontext-fill">DrawContext.Fill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#drawcontext-stroke">DrawContext.Stroke</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#colorbutton-color">ColorButton.Color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#colorbutton-setcolor">ColorButton.SetColor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#colorbutton-onchanged">ColorButton.OnChanged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initcolorbutton">InitColorButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#form-append">Form.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#form-numchildren">Form.NumChildren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#form-delete">Form.Delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#form-ispadded">Form.IsPadded</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#form-setpadded">Form.SetPadded</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initform">InitForm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#grid-append">Grid.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#grid-insertat">Grid.InsertAt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#grid-ispadded">Grid.IsPadded</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#grid-setpadded">Grid.SetPadded</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initgrid">InitGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#image-append">Image.Append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#image-destroy">Image.Destroy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#initimage">InitImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablevalue-gettype">TableValue.GetType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablevalue-text">TableValue.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablevalue-image">TableValue.Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablevalue-int">TableValue.Int</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablevalue-color">TableValue.Color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#inittablevaluestring">InitTableValueString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#inittablevalueimage">InitTableValueImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#inittablevalueint">InitTableValueInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#inittablevaluecolor">InitTableValueColor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablemodel-destroy">TableModel.Destroy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablemodel-rowinserted">TableModel.RowInserted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablemodel-rowchanged">TableModel.RowChanged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablemodel-rowdeleted">TableModel.RowDeleted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablemodel-numcolumns">TableModel.NumColumns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablemodel-tablevaluetype">TableModel.TableValueType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablemodel-numrows">TableModel.NumRows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablemodel-cellvalue">TableModel.CellValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#tablemodel-setcellvalue">TableModel.SetCellValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#inittablemodel">InitTableModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-appendtextcolumn">Table.AppendTextColumn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-appendimagecolumn">Table.AppendImageColumn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-appendimagetextcolumn">Table.AppendImageTextColumn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-appendcheckboxcolumn">Table.AppendCheckboxColumn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-appendcheckboxtextcolumn">Table.AppendCheckboxTextColumn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-appendprogressbarcolumn">Table.AppendProgressBarColumn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-appendbuttoncolumn">Table.AppendButtonColumn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-isheadervisible">Table.IsHeaderVisible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-setheadervisible">Table.SetHeaderVisible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-headersortindicator">Table.HeaderSortIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-headersetsortindicator">Table.HeaderSetSortIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-columnwidth">Table.ColumnWidth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-columnsetwidth">Table.ColumnSetWidth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#inittable">InitTable</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="UI.ob2.html#example">Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#button-example">Button Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#draw-example">Draw Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UI.ob2.html#table-example">Table Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">XDSStdLib</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">OSStream</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/src/OSStream.ob2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="osstream">
+<span id="index-0"></span><span id="id1"></span><h1>OSStream<a class="headerlink" href="#osstream" title="Link to this heading"></a></h1>
+<p>Module for Stream class with access to OS files and the standard streams.</p>
+<p>The standard streams <cite>stdin</cite>, <cite>stdout</cite> and <cite>stderr</cite> are accessable as variables
+exported from this module and is opened on demand.</p>
+<p>Reference <a class="reference internal" href="Object.ob2.html#object"><span class="std std-ref">Object</span></a> module for further details on procedures/functions.</p>
+<section id="const">
+<h2>Const<a class="headerlink" href="#const" title="Link to this heading"></a></h2>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">ModeRead</span><span class="o">*</span> <span class="o">=</span> <span class="n">xlibOS</span><span class="p">.</span><span class="n">X2C_fAccessRead</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">ModeWrite</span><span class="o">*</span> <span class="o">=</span> <span class="n">xlibOS</span><span class="p">.</span><span class="n">X2C_fAccessWrite</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">ModeNew</span><span class="o">*</span> <span class="o">=</span> <span class="n">xlibOS</span><span class="p">.</span><span class="n">X2C_fModeNew</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">ModeText</span><span class="o">*</span> <span class="o">=</span> <span class="n">xlibOS</span><span class="p">.</span><span class="n">X2C_fModeText</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">ModeRaw</span><span class="o">*</span> <span class="o">=</span> <span class="n">xlibOS</span><span class="p">.</span><span class="n">X2C_fModeRaw</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">SeekSet</span><span class="o">*</span> <span class="o">=</span> <span class="n">Object</span><span class="p">.</span><span class="n">SeekSet</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">SeekCur</span><span class="o">*</span> <span class="o">=</span> <span class="n">Object</span><span class="p">.</span><span class="n">SeekCur</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">SeekEnd</span><span class="o">*</span> <span class="o">=</span> <span class="n">Object</span><span class="p">.</span><span class="n">SeekEnd</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamOK</span><span class="o">*</span>                   <span class="o">=</span> <span class="n">Object</span><span class="p">.</span><span class="n">StreamOK</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamNotImplementedError</span><span class="o">*</span>  <span class="o">=</span> <span class="n">Object</span><span class="p">.</span><span class="n">StreamNotImplementedError</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamNotOpenError</span><span class="o">*</span>         <span class="o">=</span> <span class="n">Object</span><span class="p">.</span><span class="n">StreamNotOpenError</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamReadError</span><span class="o">*</span>            <span class="o">=</span> <span class="n">Object</span><span class="p">.</span><span class="n">StreamReadError</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamWriteError</span><span class="o">*</span>           <span class="o">=</span> <span class="n">Object</span><span class="p">.</span><span class="n">StreamWriteError</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="types">
+<h2>Types<a class="headerlink" href="#types" title="Link to this heading"></a></h2>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamDesc</span><span class="o">*</span> <span class="o">=</span> <span class="n">Object</span><span class="p">.</span><span class="n">StreamDesc</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamFile</span><span class="o">*</span> <span class="o">=</span> <span class="kr">POINTER</span> <span class="kr">TO</span> <span class="n">StreamFileDesc</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamFileDesc</span><span class="o">*</span> <span class="o">=</span> <span class="kr">RECORD</span> <span class="p">(</span><span class="n">StreamDesc</span><span class="p">)</span>
+        <span class="n">fh</span> <span class="p">:</span> <span class="n">xlibOS</span><span class="p">.</span><span class="n">X2C_OSFHANDLE</span><span class="p">;</span>
+        <span class="n">mode</span> <span class="p">:</span> <span class="kr">SET</span><span class="p">;</span>
+        <span class="n">opened</span> <span class="p">:</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+    <span class="kr">END</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamStdIn</span><span class="o">*</span> <span class="o">=</span> <span class="kr">POINTER</span> <span class="kr">TO</span> <span class="n">StreamStdInDesc</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamStdInDesc</span><span class="o">*</span> <span class="o">=</span> <span class="kr">RECORD</span> <span class="p">(</span><span class="n">StreamDesc</span><span class="p">)</span>
+        <span class="n">fh</span> <span class="p">:</span> <span class="n">xlibOS</span><span class="p">.</span><span class="n">X2C_OSFHANDLE</span><span class="p">;</span>
+        <span class="n">opened</span> <span class="p">:</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+    <span class="kr">END</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamStdOut</span><span class="o">*</span> <span class="o">=</span> <span class="kr">POINTER</span> <span class="kr">TO</span> <span class="n">StreamStdOutDesc</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamStdOutDesc</span><span class="o">*</span> <span class="o">=</span> <span class="kr">RECORD</span> <span class="p">(</span><span class="n">StreamDesc</span><span class="p">)</span>
+        <span class="n">fh</span> <span class="p">:</span> <span class="n">xlibOS</span><span class="p">.</span><span class="n">X2C_OSFHANDLE</span><span class="p">;</span>
+        <span class="n">opened</span> <span class="p">:</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+    <span class="kr">END</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamStdErr</span><span class="o">*</span> <span class="o">=</span> <span class="kr">POINTER</span> <span class="kr">TO</span> <span class="n">StreamStdErrDesc</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="n">StreamStdErrDesc</span><span class="o">*</span> <span class="o">=</span> <span class="kr">RECORD</span> <span class="p">(</span><span class="n">StreamDesc</span><span class="p">)</span>
+        <span class="n">fh</span> <span class="p">:</span> <span class="n">xlibOS</span><span class="p">.</span><span class="n">X2C_OSFHANDLE</span><span class="p">;</span>
+        <span class="n">opened</span> <span class="p">:</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+    <span class="kr">END</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="procedures">
+<h2>Procedures<a class="headerlink" href="#procedures" title="Link to this heading"></a></h2>
+<section id="streamfile-open">
+<span id="osstream-streamfile-open"></span><h3>StreamFile.Open<a class="headerlink" href="#streamfile-open" title="Link to this heading"></a></h3>
+<p>Open a OS file with given mode (defaults to  <cite>ModeRead</cite> + <cite>ModeRaw</cite>).
+Return <cite>TRUE</cite> on success.</p>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">Open</span><span class="o">*</span><span class="p">(</span><span class="n">filename</span><span class="o">-</span> <span class="p">:</span> <span class="kr">ARRAY</span> <span class="kr">OF</span> <span class="nb">CHAR</span><span class="p">;</span> <span class="n">mode</span> <span class="o">:=</span> <span class="n">ModeRead</span> <span class="o">+</span> <span class="n">ModeRaw</span><span class="p">:</span> <span class="kr">SET</span><span class="p">):</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-format">
+<span id="osstream-streamfile-format"></span><h3>StreamFile.Format<a class="headerlink" href="#streamfile-format" title="Link to this heading"></a></h3>
+<p>Writes formatted string according to fmt definition and arguments.
+Reference <a class="reference internal" href="Format.ob2.html#format"><span class="std std-ref">Format</span></a> module for further details.
+Sets error to <cite>StreamWriteError</cite> on failure.</p>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">Format</span><span class="o">*</span><span class="p">(</span><span class="n">fmt</span><span class="o">-</span> <span class="p">:</span> <span class="kr">ARRAY</span> <span class="kr">OF</span> <span class="nb">CHAR</span><span class="p">;</span> <span class="n">SEQ</span> <span class="n">seq</span><span class="p">:</span> <span class="bp">SYSTEM</span><span class="p">.</span><span class="bp">BYTE</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-formatinteger">
+<span id="osstream-streamfile-formatinteger"></span><h3>StreamFile.FormatInteger<a class="headerlink" href="#streamfile-formatinteger" title="Link to this heading"></a></h3>
+<p>Writes formatted string from <cite>LONGLONGINT</cite> value.
+This is a separate procedure for handling <cite>64bit</cite> values
+due to a limitation in the <cite>XDS</cite> compiler.
+Reference <a class="reference internal" href="Format.ob2.html#format"><span class="std std-ref">Format</span></a> module for further details.
+Sets error to <cite>StreamWriteError</cite> on failure.</p>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">FormatInteger</span><span class="o">*</span><span class="p">(</span><span class="n">value</span> <span class="p">:</span> <span class="n">LONGLONGINT</span><span class="p">;</span> <span class="n">width</span> <span class="o">:=</span> <span class="mi">0</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">;</span> <span class="n">flags</span> <span class="o">:=</span> <span class="p">{}</span> <span class="p">:</span> <span class="kr">SET</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-formatcardinal">
+<span id="osstream-streamfile-formatcardinal"></span><h3>StreamFile.FormatCardinal<a class="headerlink" href="#streamfile-formatcardinal" title="Link to this heading"></a></h3>
+<p>Writes formatted string from <cite>CARD64</cite> value.
+This is a separate procedure for handling <cite>64bit</cite> values
+due to a limitation in the <cite>XDS</cite> compiler.
+Reference <a class="reference internal" href="Format.ob2.html#format"><span class="std std-ref">Format</span></a> module for further details.
+Sets error to <cite>StreamWriteError</cite> on failure.</p>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">FormatCardinal</span><span class="o">*</span><span class="p">(</span><span class="n">value</span> <span class="p">:</span> <span class="bp">SYSTEM</span><span class="p">.</span><span class="n">CARD64</span><span class="p">;</span> <span class="n">base</span> <span class="o">:=</span> <span class="mi">10</span> <span class="p">:</span> <span class="nb">INTEGER</span><span class="p">;</span> <span class="n">width</span> <span class="o">:=</span> <span class="mi">0</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">;</span> <span class="n">flags</span> <span class="o">:=</span> <span class="p">{}</span> <span class="p">:</span> <span class="kr">SET</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-readbytes">
+<span id="osstream-streamfile-readbytes"></span><h3>StreamFile.ReadBytes<a class="headerlink" href="#streamfile-readbytes" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Read bytes into buffer with optional start and length.</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">ReadBytes</span><span class="o">*</span><span class="p">(</span><span class="kr">VAR</span> <span class="n">buffer</span> <span class="p">:</span> <span class="kr">ARRAY</span> <span class="kr">OF</span> <span class="bp">BYTE</span><span class="p">;</span> <span class="n">start</span> <span class="o">:=</span> <span class="mi">0</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">;</span> <span class="n">length</span> <span class="o">:=</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">):</span> <span class="nb">LONGINT</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-writebytes">
+<span id="osstream-streamfile-writebytes"></span><h3>StreamFile.WriteBytes<a class="headerlink" href="#streamfile-writebytes" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Write bytes from buffer with optional start and length.</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">WriteBytes</span><span class="o">*</span><span class="p">(</span><span class="n">buffer</span><span class="o">-</span> <span class="p">:</span> <span class="kr">ARRAY</span> <span class="kr">OF</span> <span class="bp">BYTE</span><span class="p">;</span> <span class="n">start</span> <span class="o">:=</span> <span class="mi">0</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">;</span> <span class="n">length</span> <span class="o">:=</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">):</span> <span class="nb">LONGINT</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-seek">
+<span id="osstream-streamfile-seek"></span><h3>StreamFile.Seek<a class="headerlink" href="#streamfile-seek" title="Link to this heading"></a></h3>
+<p>Offsets or set the current location depending on the
+mode argument:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>SeekSet</cite> : sets position relative to start of stream.</p></li>
+<li><p><cite>SeekCur</cite> : sets position relative to current position of stream.</p></li>
+<li><p><cite>SeekEnd</cite> : sets position relative to end position of stream (only negative offset values makes sense).</p></li>
+</ul>
+</div></blockquote>
+<p>Return new position or -1 in case of failure.</p>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">Seek</span><span class="o">*</span><span class="p">(</span><span class="n">offset</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">;</span> <span class="n">mode</span> <span class="o">:=</span> <span class="n">SeekSet</span> <span class="p">:</span> <span class="nb">INTEGER</span><span class="p">):</span> <span class="nb">LONGINT</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-tell">
+<span id="osstream-streamfile-tell"></span><h3>StreamFile.Tell<a class="headerlink" href="#streamfile-tell" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Return current position or -1 on failure.</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">Tell</span><span class="o">*</span><span class="p">():</span> <span class="nb">LONGINT</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-truncate">
+<span id="osstream-streamfile-truncate"></span><h3>StreamFile.Truncate<a class="headerlink" href="#streamfile-truncate" title="Link to this heading"></a></h3>
+<p>Truncates or extends stream to new size.
+Return new size or -1 in case of failure.</p>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">Truncate</span><span class="o">*</span><span class="p">(</span><span class="n">size</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">):</span> <span class="nb">LONGINT</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-flush">
+<span id="osstream-streamfile-flush"></span><h3>StreamFile.Flush<a class="headerlink" href="#streamfile-flush" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Flush buffers</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">Flush</span><span class="o">*</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-close">
+<span id="osstream-streamfile-close"></span><h3>StreamFile.Close<a class="headerlink" href="#streamfile-close" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Close Stream</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">Close</span><span class="o">*</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-closed">
+<span id="osstream-streamfile-closed"></span><h3>StreamFile.Closed<a class="headerlink" href="#streamfile-closed" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Return <cite>TRUE</cite> if Stream is closed</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">Closed</span><span class="o">*</span><span class="p">():</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-readable">
+<span id="osstream-streamfile-readable"></span><h3>StreamFile.Readable<a class="headerlink" href="#streamfile-readable" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Return <cite>TRUE</cite> if Stream is readable</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">Readable</span><span class="o">*</span><span class="p">():</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-writeable">
+<span id="osstream-streamfile-writeable"></span><h3>StreamFile.Writeable<a class="headerlink" href="#streamfile-writeable" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Return <cite>TRUE</cite> if Stream is writeable</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">Writeable</span><span class="o">*</span><span class="p">():</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamfile-seekable">
+<span id="osstream-streamfile-seekable"></span><h3>StreamFile.Seekable<a class="headerlink" href="#streamfile-seekable" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Return <cite>TRUE</cite> if Stream is seekable</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamFile</span><span class="p">)</span> <span class="n">Seekable</span><span class="o">*</span><span class="p">():</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstdin-readbytes">
+<span id="osstream-streamstdin-readbytes"></span><h3>StreamStdIn.ReadBytes<a class="headerlink" href="#streamstdin-readbytes" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Read bytes into buffer with optional start and length.</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdIn</span><span class="p">)</span> <span class="n">ReadBytes</span><span class="o">*</span><span class="p">(</span><span class="kr">VAR</span> <span class="n">buffer</span> <span class="p">:</span> <span class="kr">ARRAY</span> <span class="kr">OF</span> <span class="bp">BYTE</span><span class="p">;</span> <span class="n">start</span> <span class="o">:=</span> <span class="mi">0</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">;</span> <span class="n">length</span> <span class="o">:=</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">):</span> <span class="nb">LONGINT</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstdin-readchar">
+<span id="osstream-streamstdin-readchar"></span><h3>StreamStdIn.ReadChar<a class="headerlink" href="#streamstdin-readchar" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Read <cite>CHAR</cite> value. Return <cite>TRUE</cite> if success.</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdIn</span><span class="p">)</span> <span class="n">ReadChar</span><span class="o">*</span><span class="p">(</span><span class="kr">VAR</span> <span class="n">value</span> <span class="p">:</span> <span class="nb">CHAR</span><span class="p">):</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstdin-readable">
+<span id="osstream-streamstdin-readable"></span><h3>StreamStdIn.Readable<a class="headerlink" href="#streamstdin-readable" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Return <cite>TRUE</cite> if Stream is readable</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdIn</span><span class="p">)</span> <span class="n">Readable</span><span class="o">*</span><span class="p">():</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstdin-istty">
+<span id="osstream-streamstdin-istty"></span><h3>StreamStdIn.IsTTY<a class="headerlink" href="#streamstdin-istty" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Return <cite>TRUE</cite> if Stream is a TTY</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdIn</span><span class="p">)</span> <span class="n">IsTTY</span><span class="o">*</span><span class="p">():</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstdout-format">
+<span id="osstream-streamstdout-format"></span><h3>StreamStdOut.Format<a class="headerlink" href="#streamstdout-format" title="Link to this heading"></a></h3>
+<p>Writes formatted string according to fmt definition and arguments.
+Reference <a class="reference internal" href="Format.ob2.html#format"><span class="std std-ref">Format</span></a> module for further details.
+Sets error to <cite>StreamWriteError</cite> on failure.</p>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdOut</span><span class="p">)</span> <span class="n">Format</span><span class="o">*</span><span class="p">(</span><span class="n">fmt</span><span class="o">-</span> <span class="p">:</span> <span class="kr">ARRAY</span> <span class="kr">OF</span> <span class="nb">CHAR</span><span class="p">;</span> <span class="n">SEQ</span> <span class="n">seq</span><span class="p">:</span> <span class="bp">SYSTEM</span><span class="p">.</span><span class="bp">BYTE</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstdout-formatinteger">
+<span id="osstream-streamstdout-formatinteger"></span><h3>StreamStdOut.FormatInteger<a class="headerlink" href="#streamstdout-formatinteger" title="Link to this heading"></a></h3>
+<p>Writes formatted string from <cite>LONGLONGINT</cite> value.
+This is a separate procedure for handling <cite>64bit</cite> values
+due to a limitation in the <cite>XDS</cite> compiler.
+Reference <a class="reference internal" href="Format.ob2.html#format"><span class="std std-ref">Format</span></a> module for further details.
+Sets error to <cite>StreamWriteError</cite> on failure.</p>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdOut</span><span class="p">)</span> <span class="n">FormatInteger</span><span class="o">*</span><span class="p">(</span><span class="n">value</span> <span class="p">:</span> <span class="n">LONGLONGINT</span><span class="p">;</span> <span class="n">width</span> <span class="o">:=</span> <span class="mi">0</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">;</span> <span class="n">flags</span> <span class="o">:=</span> <span class="p">{}</span> <span class="p">:</span> <span class="kr">SET</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstdout-formatcardinal">
+<span id="osstream-streamstdout-formatcardinal"></span><h3>StreamStdOut.FormatCardinal<a class="headerlink" href="#streamstdout-formatcardinal" title="Link to this heading"></a></h3>
+<p>Writes formatted string from <cite>CARD64</cite> value.
+This is a separate procedure for handling <cite>64bit</cite> values
+due to a limitation in the <cite>XDS</cite> compiler.
+Reference <a class="reference internal" href="Format.ob2.html#format"><span class="std std-ref">Format</span></a> module for further details.
+Sets error to <cite>StreamWriteError</cite> on failure.</p>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdOut</span><span class="p">)</span> <span class="n">FormatCardinal</span><span class="o">*</span><span class="p">(</span><span class="n">value</span> <span class="p">:</span> <span class="bp">SYSTEM</span><span class="p">.</span><span class="n">CARD64</span><span class="p">;</span> <span class="n">base</span> <span class="o">:=</span> <span class="mi">10</span> <span class="p">:</span> <span class="nb">INTEGER</span><span class="p">;</span> <span class="n">width</span> <span class="o">:=</span> <span class="mi">0</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">;</span> <span class="n">flags</span> <span class="o">:=</span> <span class="p">{}</span> <span class="p">:</span> <span class="kr">SET</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstdout-writebytes">
+<span id="osstream-streamstdout-writebytes"></span><h3>StreamStdOut.WriteBytes<a class="headerlink" href="#streamstdout-writebytes" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Write bytes from buffer with optional start and length.</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdOut</span><span class="p">)</span> <span class="n">WriteBytes</span><span class="o">*</span><span class="p">(</span><span class="n">buffer</span><span class="o">-</span> <span class="p">:</span> <span class="kr">ARRAY</span> <span class="kr">OF</span> <span class="bp">BYTE</span><span class="p">;</span> <span class="n">start</span> <span class="o">:=</span> <span class="mi">0</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">;</span> <span class="n">length</span> <span class="o">:=</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">):</span> <span class="nb">LONGINT</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstdout-writeable">
+<span id="osstream-streamstdout-writeable"></span><h3>StreamStdOut.Writeable<a class="headerlink" href="#streamstdout-writeable" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Return <cite>TRUE</cite> if Stream is writeable</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdOut</span><span class="p">)</span> <span class="n">Writeable</span><span class="o">*</span><span class="p">():</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstdout-istty">
+<span id="osstream-streamstdout-istty"></span><h3>StreamStdOut.IsTTY<a class="headerlink" href="#streamstdout-istty" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Return <cite>TRUE</cite> if Stream is a TTY</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdOut</span><span class="p">)</span> <span class="n">IsTTY</span><span class="o">*</span><span class="p">():</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstderr-format">
+<span id="osstream-streamstderr-format"></span><h3>StreamStdErr.Format<a class="headerlink" href="#streamstderr-format" title="Link to this heading"></a></h3>
+<p>Writes formatted string according to fmt definition and arguments.
+Reference <a class="reference internal" href="Format.ob2.html#format"><span class="std std-ref">Format</span></a> module for further details.
+Sets error to <cite>StreamWriteError</cite> on failure.</p>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdErr</span><span class="p">)</span> <span class="n">Format</span><span class="o">*</span><span class="p">(</span><span class="n">fmt</span><span class="o">-</span> <span class="p">:</span> <span class="kr">ARRAY</span> <span class="kr">OF</span> <span class="nb">CHAR</span><span class="p">;</span> <span class="n">SEQ</span> <span class="n">seq</span><span class="p">:</span> <span class="bp">SYSTEM</span><span class="p">.</span><span class="bp">BYTE</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstderr-formatinteger">
+<span id="osstream-streamstderr-formatinteger"></span><h3>StreamStdErr.FormatInteger<a class="headerlink" href="#streamstderr-formatinteger" title="Link to this heading"></a></h3>
+<p>Writes formatted string from <cite>LONGLONGINT</cite> value.
+This is a separate procedure for handling <cite>64bit</cite> values
+due to a limitation in the <cite>XDS</cite> compiler.
+Reference <a class="reference internal" href="Format.ob2.html#format"><span class="std std-ref">Format</span></a> module for further details.
+Sets error to <cite>StreamWriteError</cite> on failure.</p>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdErr</span><span class="p">)</span> <span class="n">FormatInteger</span><span class="o">*</span><span class="p">(</span><span class="n">value</span> <span class="p">:</span> <span class="n">LONGLONGINT</span><span class="p">;</span> <span class="n">width</span> <span class="o">:=</span> <span class="mi">0</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">;</span> <span class="n">flags</span> <span class="o">:=</span> <span class="p">{}</span> <span class="p">:</span> <span class="kr">SET</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstderr-formatcardinal">
+<span id="osstream-streamstderr-formatcardinal"></span><h3>StreamStdErr.FormatCardinal<a class="headerlink" href="#streamstderr-formatcardinal" title="Link to this heading"></a></h3>
+<p>Writes formatted string from <cite>CARD64</cite> value.
+This is a separate procedure for handling <cite>64bit</cite> values
+due to a limitation in the <cite>XDS</cite> compiler.
+Reference <a class="reference internal" href="Format.ob2.html#format"><span class="std std-ref">Format</span></a> module for further details.
+Sets error to <cite>StreamWriteError</cite> on failure.</p>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdErr</span><span class="p">)</span> <span class="n">FormatCardinal</span><span class="o">*</span><span class="p">(</span><span class="n">value</span> <span class="p">:</span> <span class="bp">SYSTEM</span><span class="p">.</span><span class="n">CARD64</span><span class="p">;</span> <span class="n">base</span> <span class="o">:=</span> <span class="mi">10</span> <span class="p">:</span> <span class="nb">INTEGER</span><span class="p">;</span> <span class="n">width</span> <span class="o">:=</span> <span class="mi">0</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">;</span> <span class="n">flags</span> <span class="o">:=</span> <span class="p">{}</span> <span class="p">:</span> <span class="kr">SET</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstderr-writebytes">
+<span id="osstream-streamstderr-writebytes"></span><h3>StreamStdErr.WriteBytes<a class="headerlink" href="#streamstderr-writebytes" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Write bytes from buffer with optional start and length.</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdErr</span><span class="p">)</span> <span class="n">WriteBytes</span><span class="o">*</span><span class="p">(</span><span class="n">buffer</span><span class="o">-</span> <span class="p">:</span> <span class="kr">ARRAY</span> <span class="kr">OF</span> <span class="bp">BYTE</span><span class="p">;</span> <span class="n">start</span> <span class="o">:=</span> <span class="mi">0</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">;</span> <span class="n">length</span> <span class="o">:=</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">:</span> <span class="nb">LONGINT</span><span class="p">):</span> <span class="nb">LONGINT</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstderr-writeable">
+<span id="osstream-streamstderr-writeable"></span><h3>StreamStdErr.Writeable<a class="headerlink" href="#streamstderr-writeable" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Return <cite>TRUE</cite> if Stream is writeable</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdErr</span><span class="p">)</span> <span class="n">Writeable</span><span class="o">*</span><span class="p">():</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="streamstderr-istty">
+<span id="osstream-streamstderr-istty"></span><h3>StreamStdErr.IsTTY<a class="headerlink" href="#streamstderr-istty" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Return <cite>TRUE</cite> if Stream is a TTY</p>
+</div></blockquote>
+<div class="highlight-modula2 notranslate"><div class="highlight"><pre><span></span><span class="kr">PROCEDURE</span> <span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="n">StreamStdErr</span><span class="p">)</span> <span class="n">IsTTY</span><span class="o">*</span><span class="p">():</span> <span class="nb">BOOLEAN</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="OSPath.ob2.html" class="btn btn-neutral float-left" title="OSPath" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="O2Testing.ob2.html" class="btn btn-neutral float-right" title="O2Testing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Runar Tenfjord.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
